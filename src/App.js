@@ -1,17 +1,35 @@
 import './App.css';
-import Header from './Header';
-import Nav from './Nav';
-import Main from './Main';
-import Footer from './Footer';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Nav from './components/Nav';
+import CallToAction from './components/CallToAction';
+import Specials from './components/Specials';
+import CustomersSay from './components/CustomersSay';
+import Chicago from './components/Chicago';
+import Footer from './components/Footer';
+import BookingPage from './pages/BookingPage'; // ← Add this
 
 function App() {
   return (
-    <>
-      <Header />
-      <Nav />
-      <Main />
-      <Footer />
-    </>
+    <Router>
+      <div className="app-wrapper">
+        <Nav />
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <main>
+                <CallToAction />
+                <Specials />
+                <CustomersSay />
+                <Chicago />
+              </main>
+            }
+          />
+          <Route path="/booking" element={<BookingPage />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 

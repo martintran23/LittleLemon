@@ -1,7 +1,15 @@
+import CallToAction from './CallToAction';
+import Specials from './Specials';
+import CustomersSay from './CustomersSay';
+import Chicago from './Chicago';
+
 function Main() {
   return (
-    <main>
-      Homepage
+    <main role="main">
+      <CallToAction />
+      <Specials />
+      <CustomersSay />
+      <Chicago />
     </main>
   );
 }

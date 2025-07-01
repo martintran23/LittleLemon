@@ -1,7 +1,13 @@
 function Header() {
   return (
-    <header>
-      <img src="logo.png" alt="Little Lemon Logo" />
+    <header role="banner" className="site-header">
+      <div className="header-container">
+        <img
+          src="/logo.png"
+          alt="Little Lemon Restaurant Logo"
+          className="logo"
+        />
+      </div>
     </header>
   );
 }
