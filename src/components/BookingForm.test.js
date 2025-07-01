@@ -1,3 +1,8 @@
+beforeAll(() => {
+  // Mock window.alert to a no-op function to avoid errors during tests
+  window.alert = jest.fn();
+});
+
 import { render, screen, fireEvent } from '@testing-library/react';
 import BookingForm from './BookingForm';
 
