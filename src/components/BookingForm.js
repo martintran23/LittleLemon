@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './App.css'; // Make sure this is imported somewhere globally
+//import './App.css'; // Make sure this is imported somewhere globally
 
 function BookingForm({ availableTimes, onSubmit }) {
   const [formData, setFormData] = useState({
